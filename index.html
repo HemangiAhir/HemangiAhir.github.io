@@ -7,129 +7,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemangi Ahir - Portfolio</title>
     <style>
-     body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-image: url('wallpaper.jpg');
-        background-size: cover;
-        margin: 0; /* Remove default body margins */
-        padding: 2rem;
-    }
+    body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            margin: 0; /* Remove default body margins */
+            padding: 2rem;
+        }
 
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.8);
-        /* This sets the background color to an off-white transparent color */
-        padding: 2rem;
-        width: 100%; /* Full width */
-        text-align: center;
-        box-sizing: border-box;
-    }
 
-    h1, h2, h3 {
-        margin: 0; /* Remove default margins */
-    }
 
-    h1 {
-        font-size: 3rem; /* Increased font size for title */
-        color: #000; /* Black font color for your name */
-        margin-bottom: 0.5rem; /* Add margin below the title */
-    }
+        .text-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            /* This sets the background color to an off-white transparent color */
+            padding: 2rem;
+            width: 100%; /* Full width */
+            text-align: center;
+            box-sizing: border-box;
+        }
 
-    h2 {
-        font-size: 1.5rem;
-        margin-top: 1rem; /* Adjust the margin as needed */
-    }
+        h1, h2, h3 {
+            margin: 0; /* Remove default margins */
+        }
 
-    h3 {
-        font-size: 1.2rem;
-        margin-top: 0.5rem; /* Adjust the margin as needed */
-        color: #000; /* Black font color for your name */
-    }
+        h1 {
+            font-size: 3rem; /* Increased font size for title */
+            color: #000; /* Black font color for your name */
+            margin-bottom: 0.5rem; /* Add margin below the title */
+        }
 
-    p {
-        margin-bottom: 1rem;
-    }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 1rem; /* Adjust the margin as needed */
+        }
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 0.5rem; /* Adjust the margin as needed */
+            color: #000; /* Black font color for your name */
+        }
 
-    li {
-        margin-bottom: 0.5rem;
-    }
+        p {
+            margin-bottom: 1rem;
+        }
 
-    a {
-        color: #ff7f50;
-        text-decoration: none;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    a:hover {
-        text-decoration: underline;
-    }
+        li {
+            margin-bottom: 0.5rem;
+        }
 
-    .image-container {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin-bottom: 1rem; /* Add some spacing between image and text */
-    }
+        a {
+            color: #ff7f50;
+            text-decoration: none;
+        }
 
-    .image-container img {
-        width: 100%; /* Cover the full width of the container */
-        max-width: 500px; /* Set a maximum width as needed */
-        height: auto; /* Maintain the original aspect ratio */
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    .details-container {
-        text-align: left;
-        margin-left: 2rem;
-    }
+        .image-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 1rem; /* Add some spacing between image and text */
+        }
 
-    .introduction-container {
-        text-align: center;
-        margin-top: 2rem; /* Add space between the image and the introduction */
-        font-size: 1.2rem; /* Increased font size for the introduction */
-    }
+        .image-container img {
+            width: 100%; /* Cover the full width of the container */
+            max-width: 500px; /* Set a maximum width as needed */
+            height: auto; /* Maintain the original aspect ratio */
+        }
 
-    .tabs-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 2rem;
-    }
+        .details-container {
+            text-align: left;
+            margin-left: 2rem;
+        }
 
-    .tab {
-        margin: 0.5rem;
-        font-size: 1.2rem;
-        cursor: pointer;
-        position: relative;
-        flex: 1; /* Take full width on small screens */
-    }
+        .introduction-container {
+            text-align: center;
+            margin-top: 2rem; /* Add space between the image and the introduction */
+            font-size: 1.2rem; /* Increased font size for the introduction */
+        }
 
-    .tab:hover,
-    .active-tab {
-        text-decoration: underline;
-    }
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
 
-    .active-tab::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #ff7f50; /* Underline color for active tab */
-    }
+        .tab {
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+        }
 
-    .profession-container {
-        text-align: left;
-        margin-top: 2rem; /* Add space between the name and the profession */
-    }
+        .tab:hover,
+        .active-tab {
+            text-decoration: underline;
+        }
 
-    /* Mobile Styles */
+        .active-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ff7f50; /* Underline color for active tab */
+        }
+
+        .profession-container {
+            text-align: left;
+            margin-top: 2rem; /* Add space between the name and the profession */
+        }
+
+        /* Additional styles for tab content */
+        .tab-content {
+            display: none;
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .active-content {
+            display: block;
+        }
+	  /* Mobile Styles */
     @media only screen and (max-width: 767px) {
         h1 {
             font-size: 2rem;
