@@ -139,7 +139,22 @@
         .active-content {
             display: block;
         }
-
+	@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    /* Adjust other font sizes as needed */
+	}
+       {
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+    }
+}
     </style>
 
     <script>
