@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha256-BvZTHBtLZx3Ct1wEoRq1b93MIJZb5Ccjk9Jb7ftNUGw=" crossorigin="anonymous" />
-	
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemangi Ahir - Portfolio</title>
@@ -140,60 +140,48 @@
             display: block;
         }
 	  /* Mobile Styles */
-  
-
-	    h1 {
-    font-size: 2rem;
-}
-
-@media screen and (max-width: 767px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Adjust font sizes for other elements as needed */
-
-.image-container {
-    flex-direction: column;
-    align-items: center;
-}
-	    {
-    .text-container {
-        width: 90%; /* Adjust the width as needed */
-        font-size: 1rem; /* Adjust the font size for better readability */
+    @media only screen and (max-width: 767px) {
+       h1 {
+        font-size: 2rem;
     }
 
+    /* Adjust font sizes for other elements as needed */
 
-.image-container img {
-    max-width: 100%; /* Make images responsive */
-    height: auto;
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 100%; /* Make images responsive */
+        height: auto;
+    }
+
+    /* Adjust margins and padding for various elements */
+
+    .tabs-container {
+        margin-top: 1rem;
+    }
+
+    .tab {
+        font-size: 1rem;
+        margin: 0.3rem;
+    }
+
+    .job-experience,
+    .project-description,
+    .skills-description,
+    .certifications-description,
+    .contact-information {
+        text-align: center;
+    }
+
+    .tab-content,
+    .additional-experience {
+        margin-top: 1rem;
+    }
 }
-
-/* Adjust margins and padding for various elements */
-
-.tabs-container {
-    margin-top: 1rem;
-}
-
-.tab {
-    font-size: 1rem;
-    margin: 0.3rem;
-}
-
-.job-experience,
-.project-description,
-.skills-description,
-.certifications-description,
-.contact-information {
-    text-align: center;
-}
-
-.tab-content,
-.additional-experience {
-    margin-top: 1rem;
-}
-   </style>
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -223,7 +211,7 @@
 <body>
     <div class="text-container">
         <div class="image-container">
-            <img src="hemy.jpg" alt="Your Picture">
+            <img src="hemy.jgg" alt="Your Picture">
             <div class="details-container">
                 <h1>Hemangi Ahir</h1>
                 <div class="introduction-container" style="text-align: left;">
@@ -460,6 +448,7 @@
         </p>
     </div>
 </div>
+
 
 
 
