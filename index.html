@@ -140,26 +140,19 @@
             display: block;
         }
 	  /* Mobile Styles */
-    @media only screen and (max-width: 767px) {
-       h1 {
-        font-size: 2rem;
+   @media only screen and (max-width: 767px) {
+    /* Adjustments for the white transparent box */
+    .text-container {
+        width: 90%; /* Adjust the width as needed */
+        font-size: 1rem; /* Adjust the font size for better readability */
+        margin: 0 auto; /* Center the text-container */
     }
 
-    /* Adjust font sizes for other elements as needed */
-
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-container img {
-        max-width: 100%; /* Make images responsive */
-        height: auto;
-    }
-
-    /* Adjust margins and padding for various elements */
-
+    /* Adjust the layout of tabs for mobile */
     .tabs-container {
+        display: flex;
+        flex-direction: column; /* Display tabs vertically */
+        align-items: center; /* Center-align the tabs */
         margin-top: 1rem;
     }
 
@@ -168,24 +161,6 @@
         margin: 0.3rem;
     }
 
-    .job-experience,
-    .project-description,
-    .skills-description,
-    .certifications-description,
-    .contact-information {
-        text-align: center;
-    }
-
-    .tab-content,
-    .additional-experience {
-        margin-top: 1rem;
-    }
-	{
-    .text-container {
-        width: 90%; /* Adjust the width as needed */
-        font-size: 1rem; /* Adjust the font size for better readability */
-    }
-}
 
     </style>
 
