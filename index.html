@@ -140,7 +140,8 @@
             display: block;
         }
 	  /* Mobile Styles */
-  @media only screen and (max-width: 767px) {
+  /* Mobile Styles */
+@media only screen and (max-width: 767px) {
     h1 {
         font-size: 2rem;
     }
@@ -149,6 +150,7 @@
         width: 90%;
         font-size: 1rem;
         margin: 0 auto;
+        position: relative;
     }
 
     .image-container {
@@ -158,12 +160,15 @@
 
     .details-container {
         text-align: center;
-        margin-left: 0;
+        position: absolute;
+        top: 100%; /* Position details container below the image container */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust horizontal centering */
     }
 
     .introduction-container {
-        text-align: center;
-        margin-top: 0.5rem;
+        text-align: left; /* Adjust as needed */
+        margin-top: 1rem; /* Add space between the image and the introduction */
     }
 
     .tabs-container {
@@ -184,6 +189,8 @@
     .certifications-description,
     .contact-information {
         text-align: center;
+        width: 90%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the text */
     }
 
     .tab-content,
