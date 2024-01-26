@@ -142,17 +142,35 @@
 	  /* Mobile Styles */
   /* Mobile Styles */
 @media only screen and (max-width: 767px) {
-    h1 {
+
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+	body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-image: url('wallpaper.jpg');
+        background-size: cover;
+        padding: 2rem;
+    }
+	
+	h1 {
         font-size: 2rem;
     }
 
 
        .text-container {
-        width: 95%; /* Adjust the width as needed to extend the white transparent box */
-        margin: 0 auto; /* Center the text container */
-        padding: 1rem; /* Add padding to maintain space between content and box edges */
-        box-sizing: border-box; /* Include padding and border in the box's total width and height */
+        background-color: rgba(255, 255, 255, 0.8);
+        /* This sets the background color to an off-white transparent color */
+        padding: 1rem; /* Adjusted padding for better spacing */
+        width: 90%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the box horizontally */
+        height: 100%; /* Cover the full height of the body */
+        box-sizing: border-box;
     }
+    
 
     .image-container {
         text-align: center;
