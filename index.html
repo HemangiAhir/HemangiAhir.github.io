@@ -192,27 +192,28 @@
 
     .details-container {
         text-align: center;
-        position: absolute;
-        top: 100%; /* Position details container below the image container */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%); /* Adjust horizontal centering */
+        margin-top: 1rem; /* Add space between the image and details */
     }
 
     .introduction-container {
         text-align: left; /* Adjust as needed */
         margin-top: 1rem; /* Add space between the image and the introduction */
+        font-size: 1rem; /* Adjusted font size */
+        font-style: italic; /* Set text to italic */
     }
 
     .tabs-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap; /* Allow tabs to wrap to the next line if necessary */
+        justify-content: space-between; /* Add space between columns */
         margin-top: 1rem;
     }
 
     .tab {
         font-size: 1rem;
         margin: 0.3rem;
+        width: calc(50% - 0.6rem); /* Set width for two columns with margin between tabs */
+        box-sizing: border-box;
     }
 
     .job-experience,
@@ -220,9 +221,9 @@
     .skills-description,
     .certifications-description,
     .contact-information {
-        text-align: center;
-        width: 90%; /* Adjust the width as needed */
-        margin: 0 auto; /* Center the text */
+        text-align: left;
+        width: 100%; /* Adjust the width as needed */
+        margin: 0 auto;
     }
 
     .tab-content,
@@ -230,7 +231,6 @@
         margin-top: 1rem;
     }
 }
-
     </style>
 
     <script>
