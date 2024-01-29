@@ -152,13 +152,13 @@
   /* Mobile Styles */
 
 
-   @media only screen and (max-width: 767px) @media only screen and (max-width: 767px) {
+ @media only screen and (max-width: 767px) {
+
     body, html {
         height: 100%;
         margin: 0;
     }
-
-    body {
+	body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         color: #333;
@@ -166,21 +166,24 @@
         background-size: cover;
         padding: 2rem;
     }
-
-    h1 {
+	
+	h1 {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
     }
 
-    .text-container {
+
+       .text-container {
         background-color: rgba(255, 255, 255, 0.8);
-        padding: 1rem;
-        width: 95%;
-        margin: 0 auto;
-        min-height: auto;
-        background-size: cover;
-        box-sizing: border-box;
+        /* This sets the background color to an off-white transparent color */
+        padding: 1rem; /* Adjusted padding for better spacing */
+        width: 95%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the box horizontally */
+        min-height: 100vh; /* Cover the full height of the body */
+        background-size: cover
+	box-sizing: border-box;
     }
+    
 
     .image-container {
         text-align: center;
@@ -189,14 +192,15 @@
 
     .details-container {
         text-align: center;
-        position: static; /* Change from absolute to static */
-        margin: 1rem 0;
+        position: absolute;
+        top: 100%; /* Position details container below the image container */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust horizontal centering */
     }
 
     .introduction-container {
-        text-align: left;
-        margin-top: 1rem;
-        font-style: italic; /* Add italic style to the introduction */
+        text-align: left; /* Adjust as needed */
+        margin-top: 1rem; /* Add space between the image and the introduction */
     }
 
     .tabs-container {
@@ -217,8 +221,8 @@
     .certifications-description,
     .contact-information {
         text-align: center;
-        width: 90%;
-        margin: 0 auto;
+        width: 90%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the text */
     }
 
     .tab-content,
@@ -226,7 +230,6 @@
         margin-top: 1rem;
     }
 }
-
 
     </style>
 
