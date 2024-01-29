@@ -151,12 +151,13 @@
 	  /* Mobile Styles */
   /* Mobile Styles */
     @media only screen and (max-width: 767px) {
-
+	    @media only screen and (max-width: 767px) {
     body, html {
         height: 100%;
         margin: 0;
     }
-	body {
+
+    body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         color: #333;
@@ -164,48 +165,50 @@
         background-size: cover;
         padding: 2rem;
     }
-	
-	h1 {
+
+    h1 {
         font-size: 2rem;
-	margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
-
-       .text-container {
+    .text-container {
         background-color: rgba(255, 255, 255, 0.8);
-        /* This sets the background color to an off-white transparent color */
-        padding: 1rem; /* Adjusted padding for better spacing */
-        width: 95%; /* Adjust the width as needed */
-        margin: 0 auto; /* Center the box horizontally */
-        min-height: 100vh; /* Cover the full height of the body */
-        background-size: cover
-	box-sizing: border-box;
+        padding: 1rem;
+        width: 95%;
+        margin: 0 auto;
+        min-height: 100vh;
+        background-size: cover;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start; /* Align items to the top */
     }
-    
 
     .image-container {
         text-align: center;
         margin-bottom: 1rem;
     }
 
-	 .image-container img {
-        width: 80%; /* Adjusted image width for better visibility */
-        max-width: 500px; /* Set a maximum width as needed */
-        height: auto; /* Maintain the original aspect ratio */
+    .image-container img {
+        width: 80%;
+        max-width: 500px;
+        height: auto;
         display: block;
         margin: 0 auto;
     }
 
     .details-container {
         text-align: center;
-        margin-top: 1rem; /* Add space between the image and details */
+        margin-top: 1rem;
+        width: 100%;
     }
 
     .introduction-container {
-        text-align: left; /* Adjust as needed */
-        margin-top: 1rem; /* Add space between the image and the introduction */
-        font-size: 1rem; /* Adjusted font size */
-        font-style: italic; /* Set text to italic */
+        text-align: left;
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-style: italic;
     }
 
     .tabs-container {
@@ -237,6 +240,7 @@
         margin-top: 1rem;
     }
 }
+
     </style>
 
     <script>
