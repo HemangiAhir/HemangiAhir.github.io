@@ -148,8 +148,7 @@
     border-radius: 5px;
 }
 	    
-	  /* Mobile Styles */
-   
+	/* Mobile Styles */
 @media only screen and (max-width: 767px) {
 
     body, html {
@@ -218,8 +217,13 @@
     .tab {
         font-size: 1rem;
         margin: 0.3rem;
-        width: calc(50% - 0.6rem);
+        width: 100%; /* Change this line */
         box-sizing: border-box;
+        text-align: center; /* Add this line */
+    }
+
+    .tab:not(.active-tab) {
+        opacity: 0.5;
     }
 
     .job-experience,
