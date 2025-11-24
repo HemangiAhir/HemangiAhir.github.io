@@ -1,557 +1,1882 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P6NZXQJM');</script>
-     <!-- End Google Tag Manager -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha256-BvZTHBtLZx3Ct1wEoRq1b93MIJZb5Ccjk9Jb7ftNUGw=" crossorigin="anonymous" />
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemangi Ahir - Portfolio</title>
+    <title>Hemangi Ahir - Cybersecurity Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-image: url('wallpaper.jpg');
-            background-size: cover;
-            margin: 0; /* Remove default body margins */
-            padding: 2rem;
-        }
-
-
-
-        .text-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            /* This sets the background color to an off-white transparent color */
-            padding: 2rem;
-            width: 100%; /* Full width */
-            text-align: center;
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        h1, h2, h3 {
-            margin: 0; /* Remove default margins */
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #0a0518;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        h1 {
-            font-size: 3rem; /* Increased font size for title */
-            color: #000; /* Black font color for your name */
-            margin-bottom: 0.5rem; /* Add margin below the title */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, #1a0b2e 0%, #0a0518 50%);
+            z-index: 0;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 1rem; /* Adjust the margin as needed */
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle at bottom right, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            animation: pulse 8s ease-in-out infinite;
         }
 
-        h3 {
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 5, 24, 0.8);
+            backdrop-filter: blur(20px);
+            padding: 1.5rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a.home-link {
             font-size: 1.2rem;
-            margin-top: 0.5rem; /* Adjust the margin as needed */
-            color: #000; /* Black font color for your name */
+            font-weight: 700;
         }
 
-        p {
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #da70d6;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #da70d6;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 4rem;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+        }
+
+        .hero-content .highlight {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #da70d6;
+            border: 2px solid #8a2be2;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(138, 43, 226, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .visual-card {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(218, 112, 214, 0.1));
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 30px;
+            padding: 2rem;
+            transform: rotateY(-15deg) rotateX(10deg);
+            transition: all 0.5s ease;
+            box-shadow: 0 30px 60px rgba(138, 43, 226, 0.2);
+        }
+
+        .visual-card:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+        }
+
+        .profile-image-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .floating-icon {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(1) {
+            top: -30px;
+            left: -30px;
+            animation-delay: 0s;
+        }
+
+        .floating-icon:nth-child(1) i {
+            animation: pulse-firewall 2s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(2) {
+            top: -40px;
+            right: 20px;
+            animation-delay: 0.5s;
+        }
+
+        .floating-icon:nth-child(2) i {
+            animation: server-blink 1.5s ease-in-out infinite;
+        }
+
+        .floating-icon:nth-child(3) {
+            bottom: 20px;
+            right: -30px;
+            animation-delay: 1s;
+        }
+
+        .floating-icon:nth-child(3) i {
+            animation: scan-effect 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        @keyframes pulse-firewall {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        @keyframes server-blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes scan-effect {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(-10deg) scale(1.1); }
+            75% { transform: rotate(10deg) scale(1.1); }
+        }
+
+        .stats-section {
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 5%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        .section {
+            display: none;
+            padding: 5rem 5%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff;
             margin-bottom: 1rem;
         }
 
-        ul {
+        .section-title .highlight {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #8a2be2, #da70d6);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            border-color: rgba(138, 43, 226, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .card .date {
+            color: #da70d6;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.9rem 1.8rem;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+        }
+
+        .project-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.5);
+        }
+
+        /* Case Study Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a0b2e 0%, #0a0518 100%);
+            margin: 3% auto;
+            padding: 3rem;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #da70d6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #ffffff;
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .modal-header h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .modal-header .tag {
+            display: inline-block;
+            background: rgba(138, 43, 226, 0.2);
+            color: #da70d6;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .modal-body h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-body ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .modal-body li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .modal-body li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #da70d6;
+        }
+
+        .architecture-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(138, 43, 226, 0.2);
+            color: #da70d6;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        .github-link-modal {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .github-link-modal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.5);
+        }
+
+        /* Image Slider */
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: 2rem 0;
+            background: rgba(26, 11, 46, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .slider-slide {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .slider-slide.active-slide {
+            display: block;
+        }
+
+        .slider-slide.text-slide {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .slider-slide.text-slide h4 {
+            color: #da70d6;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .slider-slide.text-slide p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        .slider-btn {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .slider-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .slider-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .slider-indicator {
+            color: #da70d6;
+            font-weight: 600;
+        }
+
+        .slider-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.2);
+        }
+
+        .slider-caption {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Tooltip for stats */
+        .stat-item {
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .stat-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(26, 11, 46, 0.98);
+            color: #ffffff;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+            z-index: 100;
+            min-width: 300px;
+            transition: all 0.3s ease;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .stat-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 10px solid transparent;
+            border-top-color: rgba(138, 43, 226, 0.5);
+        }
+
+        .stat-item:hover .stat-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .stat-tooltip strong {
+            color: #da70d6;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-tooltip ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        li {
-            margin-bottom: 0.5rem;
+        .stat-tooltip li {
+            padding: 0.3rem 0;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
         }
 
-        a {
-            color: #ff7f50;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .image-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-bottom: 1rem; /* Add some spacing between image and text */
-        }
-
-        .image-container img {
-            width: 100%; /* Cover the full width of the container */
-            max-width: 500px; /* Set a maximum width as needed */
-            height: auto; /* Maintain the original aspect ratio */
-        }
-
-        .details-container {
-            text-align: left;
-            margin-left: 2rem;
-        }
-
-        .introduction-container {
+        /* Quote Section */
+        .quote-section {
             text-align: center;
-            margin-top: 2rem; /* Add space between the image and the introduction */
-            font-size: 1.2rem; /* Increased font size for the introduction */
-        }
-
-        .tabs-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .tab {
-            margin: 0 1rem;
-            font-size: 1.2rem;
-            cursor: pointer;
+            padding: 3rem 2rem;
+            margin: 2rem 5%;
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 20px;
             position: relative;
+            z-index: 1;
         }
 
-        .tab:hover,
-        .active-tab {
-            text-decoration: underline;
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #da70d6;
+            line-height: 1.8;
+            margin-bottom: 1rem;
         }
 
-        .active-tab::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
+        .quote-author {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* SVG Flowchart Container */
+        .flowchart-container {
             width: 100%;
-            height: 2px;
-            background-color: #ff7f50; /* Underline color for active tab */
+            max-height: 600px;
+            overflow-y: auto;
+            overflow-x: auto;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            border-radius: 15px;
+            background: rgba(26, 11, 46, 0.3);
+            margin: 2rem 0;
+            padding: 1rem;
         }
 
-        .profession-container {
-            text-align: left;
-            margin-top: 2rem; /* Add space between the name and the profession */
+        .flowchart-container::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
         }
 
-        /* Additional styles for tab content */
-        .tab-content {
-            display: none;
-            text-align: left;
-            margin-top: 2rem;
+        .flowchart-container::-webkit-scrollbar-track {
+            background: rgba(26, 11, 46, 0.5);
+            border-radius: 5px;
         }
 
-        .active-content {
+        .flowchart-container::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            border-radius: 5px;
+        }
+
+        .flowchart-container::-webkit-scrollbar-thumb:hover {
+            background: #da70d6;
+        }
+
+        .flowchart-container svg {
             display: block;
+            margin: 0 auto;
         }
-	    .github-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-	    
-	/* Mobile Styles */
-@media only screen and (max-width: 767px) {
 
-    body, html {
-        height: 100%;
-        margin: 0;
-    }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-image: url('wallpaper.jpg');
-        background-size: cover;
-        padding: 2rem;
-    }
+        .skill-category {
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
 
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
+        .skill-category:hover {
+            border-color: rgba(138, 43, 226, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
+        }
 
-    .image-container {
-        display: flex;
-        flex-direction: column; /* Change to column for mobile */
-        align-items: center;
-        margin-bottom: 1rem;
-    }
+        .skill-category h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-    .image-container img {
-        width: 80%;
-        max-width: 500px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
+        .skill-category h3 i {
+            color: #da70d6;
+        }
 
-    .text-container {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 1rem;
-        text-align: center;
-        box-sizing: border-box;
-        margin-top: 2rem; /* Add space between image and white box */
-        width: 95%;
-        margin: 0 auto;
-    }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
 
-    .details-container {
-        text-align: center;
-        margin-top: 1rem;
-    }
+        .skill-tag {
+            background: rgba(138, 43, 226, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
 
-    .introduction-container {
-        text-align: left;
-        margin-top: 1rem;
-        font-size: 1rem;
-        font-style: italic;
-    }
+        .skill-tag:hover {
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
 
-  .tabs-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 1rem;
-    }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
 
-    .tab {
-        font-size: 1rem;
-        margin: 0.3rem;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-        background-color: transparent; /* Change background color to transparent */
-        padding: 0.2rem 0; /* Adjust padding to make it a simple tab */
-        cursor: pointer;
-        border: none; /* Remove border */
-        color: #000; /* Set text color to white or your preferred color */
-    }
+        .contact-card {
+            background: rgba(26, 11, 46, 0.5);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
 
-    .tab:not(.active-tab) {
-        opacity: 0.5;
-    }
+        .contact-card:hover {
+            border-color: rgba(138, 43, 226, 0.5);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
+        }
 
-    .tab-content-container {
-        background-color: rgba(100, 100, 100, 0.8);
-        padding: 1rem;
-        margin-top: 1rem;
-    }
+        .contact-card i {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #8a2be2, #da70d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
 
-    .job-experience,
-    .project-description,
-    .skills-description,
-    .certifications-description,
-    .contact-information {
-        text-align: left;
-        width: 100%;
-        margin: 0 auto;
-    }
+        .contact-card h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
 
-    .tab-content,
-    .additional-experience {
-        margin-top: 1rem;
-    }
-}
+        .contact-card a,
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #da70d6;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .visual-card {
+                width: 350px;
+                height: 350px;
+                transform: none;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 5, 24, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(138, 43, 226, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 5% 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .visual-card {
+                width: 300px;
+                height: 300px;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-tooltip {
+                min-width: 250px;
+                font-size: 0.85rem;
+            }
+
+            .quote-section {
+                padding: 2rem 1rem;
+            }
+
+            .quote-text {
+                font-size: 1.2rem;
+            }
+
+            .quote-author {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.tab');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    // Remove the active-tab class from all tabs
-                    tabs.forEach(t => t.classList.remove('active-tab'));
-
-                    // Add the active-tab class to the clicked tab
-                    tab.classList.add('active-tab');
-
-                    // Hide all tab contents
-                    const tabContents = document.querySelectorAll('.tab-content');
-                    tabContents.forEach(content => content.classList.remove('active-content'));
-
-                    // Show the clicked tab content
-                    const tabContentId = tab.getAttribute('data-tab');
-                    const activeContent = document.getElementById(tabContentId);
-                    activeContent.classList.add('active-content');
-                });
-            });
-        });
-    </script>
-
-    </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.tab');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function () {
-                    // Remove the active-tab class from all tabs
-                    tabs.forEach(t => t.classList.remove('active-tab'));
-
-                    // Add the active-tab class to the clicked tab
-                    tab.classList.add('active-tab');
-
-                    // Hide all tab contents
-                    const tabContents = document.querySelectorAll('.tab-content');
-                    tabContents.forEach(content => content.classList.remove('active-content'));
-
-                    // Show the clicked tab content
-                    const tabContentId = tab.getAttribute('data-tab');
-                    const activeContent = document.getElementById(tabContentId);
-                    activeContent.classList.add('active-content');
-                });
-            });
-        });
-    </script>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FW2Y2XW4M6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FW2Y2XW4M6');
-</script>
 </head>
 <body>
-       <!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6NZXQJM"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
-   
-	<div class="text-container">
-        <div class="image-container">
-            <img src="hemy.jpg" alt="Your Picture">
-            <div class="details-container">
-                <h1>Hemangi Ahir</h1>
-                <div class="introduction-container" style="text-align: left;">
-                    <p>Greetings! I'm Hemangi Ahir, a recent graduate in Cybersecurity from UTSA. With a passion for technology and a knack for hands-on projects, I've explored virtualized network simulations and contributed to IoT-integrated classes. Proficient in Python, AWS, and cybersecurity, I bring adaptability and analytical skills to identify and tackle vulnerabilities. Join me in exploring the dynamic realm of cybersecurity!</p>
-                </div>
-                <div class="tabs-container">
-                    <div class="tab active-tab" data-tab="education">Education</div>
-                    <div class="tab" data-tab="experience">Experience</div>
-                    <div class="tab" data-tab="projects">Projects</div>
-                    <div class="tab" data-tab="skills">Skills</div>
-                    <div class="tab" data-tab="certifications">Certifications</div>
-                    <div class="tab" data-tab="contact">Contact</div>
-                </div>
-			  <!-- Education tab content -->
-        <div class="tab-content active-content" id="education">
-            <h2>Education</h2>
-            <p><strong>The University of Texas at San Antonio | Spring 2022 – Fall 2023</strong></p>
-	    <p> Master of Science in Information Technology – Cybersecurity </p>   
-	    <p><strong>Universidad Santa Maria La Antigua | Summer 2014 – Fall 2019</strong></p>
-	    <p>BS in Industrial Engineering</p>                                                     
-    
-</p>
-        </div>
-	<!-- Experience tab content -->
-	<!-- Experience tab content -->
-<div class="tab-content" id="experience">
-    <h2>Experience</h2>
-
-    <!-- Job experiences set 1 -->
-
-  <div class="job-experience">
-    <p><strong>OT Cybersecurity Specialist – Schneider Electric, Richmond, VA</strong></p>
-    <p>Apr 2024 – Present</p>
-    <ul>
-        <li>Provided OT/ICS network cybersecurity support, including risk management, vulnerability assessments, and system provisioning, patching, and upgrades.</li>
-        <li>Created a Sandbox Environment for Sepio, Claroty XDome, Elisity, and xSA.</li>
-        <li>Maintained OT asset inventories, updated network diagrams, and deployed Claroty XDome for visibility, threat detection, and incident response.</li>
-        <li>Enforced Dynamic Edge Segmentation (DES) via Elisity to improve micro-segmentation, access control, and zero-trust security.</li>
-        <li>Collaborated with teams to resolve network issues, enhance segmentation, and ensure compliance with NIST and ISA/IEC 62443.</li>
-    </ul>
-  </div>
-    <div class="job-experience">
-        <p><strong>Technology Integration Specialist – UTSA, San Antonio TX</strong></p>
-        <p>Jan 2024-Apr 2024</p>
-        <ul>
-            <li>Conducted detailed analysis and estimation for AWS services, optimizing cloud resource allocation and resulting in a cost reduction of 15%.</li>
-            <li>Successfully prepared over 50 UTSA students for the CompTIA Security+ certification, achieving a pass rate of 95%.</li>
-            <li>Developed hands-on Bluetooth labs for students, enhancing practical networking skills and receiving positive feedback, with 90% of students reporting increased proficiency.</li>
-        </ul>
-    </div>
-    
-    <div class="job-experience">
-        <p><strong>Telecom and Networking Tutor – Dept. of Cybersecurity - UTSA, San Antonio, TX</strong></p>
-        <p>Sept 2022 – Dec 2023</p>
-        <ul>
-            <li>Facilitate exam preparation and track the progress of 200 students.</li>
-            <li>Simplify intricate course concepts, including OSI Layers, subnet masks, and the IPV6 model, resulting in improved comprehension among 200 students.</li>
-            <li>Assess and provide support to 200 students, assisting them with various inquiries.</li>
-            <li>Develop and execute strategies to motivate and engage 200 students effectively.</li>
-        </ul>
-    </div>
-
-    <div class="job-experience">
-        <p><strong>Graduate Assistant - UTSA Student Union, San Antonio, Tx</strong></p>
-        <p>Jun 2022 - Aug 2022</p>
-        <ul>
-            <li>Oversaw procurement orders for the food pantry, efficiently managing orders.</li>
-            <li>Developed and implemented growth strategies for the pantry, resulting in increased engagement and support from students.</li>
-            <li>Provided leadership to a team of eight individuals, effectively coordinating their efforts in support of the food pantry's mission.</li>
-        </ul>
-    </div>
-
-    <!-- Continue button -->
-    <button class="continue-button" onclick="showAdditionalExperience()">Continue</button>
-
-    <!-- Additional job experiences (hidden by default) -->
-    <div class="additional-experience" id="additional-experience" style="display: none;">
-        <!-- Job experiences set 2 -->
-        <div class="job-experience">
-            <p><strong>Inside Product Specialist - Dell, Panama, Panama</strong></p>
-            <p>Nov 2018 – Dec 2021</p>
-            <ul>
-                <li>Collaborate with cross-functional inside sales teams, offering pre-sales technical support to establish new business relationships and boost sales with potential clients, while staying current on evolving product and industry knowledge to enhance customer experiences and strengthen Dell's brand.</li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link home-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#case-studies" class="nav-link" data-section="case-studies">Case Studies</a></li>
+                <li><a href="#ot-lab" class="nav-link" data-section="ot-lab">Interactive OT Lab</a></li>
+                <li><a href="#offensive-labs" class="nav-link" data-section="offensive-labs">Offensive Security Labs</a></li>
+                <li><a href="#tools" class="nav-link" data-section="tools">Tools & Frameworks</a></li>
+                <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
             </ul>
         </div>
+    </nav>
 
-        <div class="job-experience">
-            <p><strong>Passenger Service Agent - Copa Airlines, Panama, Panama</strong></p>
-            <p>Aug 2016 - Mar 2018</p>
-            <ul>
-                <li>Oversaw passenger check-in, document verification, reservations, and flight boarding while efficiently resolving overbooking and luggage issues. Managed boarding bridge operations to ensure smooth passenger boarding.</li>
-            </ul>
+    <!-- Home Section -->
+    <section class="section active" id="home">
+        <div class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Welcome to <span class="highlight">Hemangi Ahir</span> Portfolio</h1>
+                    <p class="subtitle" style="font-size: 1.3rem; font-weight: 600; color: #da70d6; margin-bottom: 1rem;">IT/OT/ICS Cybersecurity Specialist | Building AI-Powered Zero-Trust | Protecting Critical Infrastructure</p>
+                    <p class="subtitle">IT/OT/ICS Cybersecurity Specialist with expertise in risk management, vulnerability assessments, and zero-trust architecture. Protecting critical infrastructure and digital assets from cyber threats.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary nav-link" data-section="contact">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="#case-studies" class="btn btn-secondary nav-link" data-section="case-studies">
+                            <i class="fas fa-code"></i> View Case Studies
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="profile-image-container">
+                            <img src="hemy.jpg" alt="Hemangi Ahir">
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="floating-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="floating-icon">
+                                <i class="fas fa-user-secret"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Certifications</div>
+                    <div class="stat-tooltip">
+                        <strong>Certifications:</strong>
+                        <ul>
+                            <li>• CompTIA Security+ (COMP001022455481)</li>
+                            <li>• Generative AI: Boost Your Cybersecurity Career – IBM (UX3GIOKJS5L2)</li>
+                            <li>• Google Certificate: Introduction to Security Principles in Cloud Computing</li>
+                            <li>• Preparing for CEH</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Polyglot Speaker</div>
+                    <div class="stat-tooltip">
+                        <strong>Languages:</strong>
+                        <ul>
+                            <li>• English</li>
+                            <li>• Spanish</li>
+                            <li>• Hindi</li>
+                            <li>• Gujarati</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quote-section">
+            <div class="quote-text">"The price of freedom is eternal vigilance."</div>
+            <div class="quote-author">— Attributed to Thomas Jefferson</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <p class="section-subtitle">Academic foundation in cybersecurity and engineering</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Master of Science</h3>
+                    <span class="date">Spring 2022 – Fall 2023</span>
+                    <p><strong>Information Technology – Cybersecurity</strong></p>
+                    <p>The University of Texas at San Antonio</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Bachelor of Science</h3>
+                    <span class="date">Summer 2014 – Fall 2019</span>
+                    <p><strong>Industrial Engineering</strong></p>
+                    <p>Universidad Santa Maria La Antigua</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="section" id="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Case <span class="highlight">Studies</span></h2>
+                <p class="section-subtitle">Real-world cybersecurity implementations and research</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Powered Zero-Trust Policy Engine</h3>
+                    <span class="date">Featured Project</span>
+                    <p>Advanced AI-driven zero-trust architecture implementation for dynamic policy enforcement and threat prevention.</p>
+                    <a href="#" class="project-link" onclick="openModal('modal1'); return false;">
+                        <i class="fas fa-arrow-right"></i> View Case Study
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Securing a Global IT/OT/ICS Environment at Healthcare Company</h3>
+                    <span class="date">Enterprise Implementation</span>
+                    <p>Comprehensive security strategy for protecting critical operational technology infrastructure across global facilities.</p>
+                    <a href="#" class="project-link" onclick="openModal('modal2'); return false;">
+                        <i class="fas fa-arrow-right"></i> View Case Study
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Detecting Rogue Hardware in &lt;30 Seconds with Flipper Zero</h3>
+                    <span class="date">Hardware Security Lab</span>
+                    <p>Rapid hardware threat detection combining asset visibility with offensive security techniques using Flipper Zero.</p>
+                    <a href="#" class="project-link" onclick="openModal('modal3'); return false;">
+                        <i class="fas fa-arrow-right"></i> View Case Study
+                    </a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>From PCAP to Policy – Building an Open-Source OT Anomaly Detector</h3>
+                    <span class="date">Research & Development</span>
+                    <p>Machine learning-based anomaly detection system using Wireshark packet analysis and Python for operational technology networks.</p>
+                    <a href="#" class="project-link" onclick="openModal('modal4'); return false;">
+                        <i class="fas fa-arrow-right"></i> View Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive OT Lab Section -->
+    <section class="section" id="ot-lab">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Interactive <span class="highlight">OT Lab</span></h2>
+                <p class="section-subtitle">Hands-on operational technology security demonstrations</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Live OT Security Demonstrations</h3>
+                    <p>Explore interactive demonstrations showcasing OT/ICS security concepts, including network segmentation, asset discovery, and threat detection in industrial control systems. This lab environment simulates real-world operational technology scenarios for educational and testing purposes.</p>
+                    <ul>
+                        <li>Virtual ICS/SCADA environment setup</li>
+                        <li>Claroty XDome integration demos</li>
+                        <li>Network segmentation strategies</li>
+                        <li>Asset inventory and vulnerability assessment</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Sandbox Testing Environment</h3>
+                    <p>Access to sandbox environments built for testing security controls, validating configurations, and evaluating new security technologies before production deployment. Includes high-level Purdue Model architecture and micro-segmentation implementations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offensive Security Labs Section -->
+    <section class="section" id="offensive-labs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Offensive <span class="highlight">Security Labs</span></h2>
+                <p class="section-subtitle">Red team operations and penetration testing research</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3>Hardware Hacking & RF Analysis</h3>
+                    <p>Offensive security research focused on hardware vulnerabilities, rogue device detection, and RF signal analysis. Includes work with Flipper Zero for security assessments and BadUSB attack demonstrations.</p>
+                    <ul>
+                        <li>Flipper Zero security research</li>
+                        <li>Rogue hardware detection techniques</li>
+                        <li>RF signal interception and analysis</li>
+                        <li>USB protocol exploitation</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Network Penetration Testing</h3>
+                    <p>Vulnerability assessment and penetration testing methodologies applied to enterprise networks, focusing on identifying misconfigurations, weak authentication, and network segmentation gaps.</p>
+                    <ul>
+                        <li>Network reconnaissance techniques</li>
+                        <li>Exploit development and testing</li>
+                        <li>Post-exploitation strategies</li>
+                        <li>Security control bypass methods</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Frameworks Section -->
+    <section class="section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tools & <span class="highlight">Frameworks</span></h2>
+                <p class="section-subtitle">Security tools and frameworks expertise</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Platforms</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Redhat</span>
+                        <span class="skill-tag">Metasploit</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Cisco Packet Tracer</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Hashcat</span>
+                        <span class="skill-tag">John the Ripper</span>
+                        <span class="skill-tag">Orion SolarWinds</span>
+                        <span class="skill-tag">Panorama</span>
+                        <span class="skill-tag">Claroty XDome</span>
+                        <span class="skill-tag">Elisity</span>
+                        <span class="skill-tag">Sepio</span>
+                        <span class="skill-tag">Visio</span>
+                        <span class="skill-tag">Microsoft Project</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Frameworks</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">MITRE ATT&CK</span>
+                        <span class="skill-tag">NIST</span>
+                        <span class="skill-tag">ISO 27001</span>
+                        <span class="skill-tag">ISO 31000</span>
+                        <span class="skill-tag">AWS Well-Architected</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Blog & <span class="highlight">Articles</span></h2>
+                <p class="section-subtitle">Insights and research on cybersecurity</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Coming Soon</h3>
+                    <p>Cybersecurity insights, tutorials, and industry analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1: AI-Powered Zero-Trust Policy Engine -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">
+                <span class="tag">Featured Project</span>
+                <h2>AI-Powered Zero-Trust Policy Engine</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Project Overview</h3>
+                <p><strong>Project Title:</strong> AI for Zero-Trust Policy Optimization: Towards Intelligent Access Control in Modern Networks</p>
+                <p><strong>Objective:</strong> Developed an AI-driven system using Deep Q-Learning to automatically optimize Zero Trust security policies based on network behavior, user activity, and threat intelligence.</p>
+                <p><strong>Key Innovation:</strong> Leveraged Claude AI for rapid development of the complete machine learning pipeline, demonstrating effective human-AI collaboration in cybersecurity research and development.</p>
+                
+                <h3>System Architecture</h3>
+                <img src="architecture1.jpg" alt="Zero-Trust Architecture" class="architecture-image">
+                <p><em>Deep Q-Learning architecture integrated with zero-trust policy enforcement engine</em></p>
+                
+                <h3>Project Flowchart</h3>
+                <div class="flowchart-container">
+                    <object data="flowchart.svg" type="image/svg+xml" style="width: 100%; min-height: 800px;">
+                        <img src="flowchart.svg" alt="Project Flowchart" style="width: 100%; height: auto;">
+                    </object>
+                </div>
+                <p><em>Complete project workflow from data integration to policy deployment</em></p>
+                
+                <h3>Technical Approach</h3>
+                <ul>
+                    <li><strong>Deep Q-Network (DQN):</strong> Implemented reinforcement learning agent with 128-64-32 neural network architecture</li>
+                    <li><strong>Multi-Dataset Integration:</strong> Unified feature representation across UNSW-NB15, CICIDS2017, and CERT Insider Threat datasets</li>
+                    <li><strong>State-Action Space:</strong> 4 policy actions (Allow, Deny, Monitor, Challenge) optimized through 6,000 training samples</li>
+                    <li><strong>Reward Function:</strong> Designed to minimize false positives while maximizing threat detection accuracy</li>
+                    <li><strong>Experience Replay:</strong> 10,000-sample memory buffer for stable training convergence</li>
+                </ul>
+                
+                <h3>Training Results</h3>
+                <img src="training_results.png" alt="Training Performance Graphs" class="architecture-image">
+                <p><em>Model convergence showing reward improvement and loss reduction over 20 episodes</em></p>
+                
+                <h3>Performance Metrics</h3>
+                <div style="background: rgba(26, 11, 46, 0.5); padding: 1.5rem; border-radius: 10px; border-left: 4px solid #da70d6; margin: 1.5rem 0;">
+                    <p><strong>Test Set Performance:</strong></p>
+                    <ul style="margin-left: 0;">
+                        <li>Accuracy: <strong>100.00%</strong></li>
+                        <li>Precision: <strong>100.00%</strong></li>
+                        <li>Recall: <strong>100.00%</strong></li>
+                        <li>F1-Score: <strong>100.00%</strong></li>
+                        <li>False Positive Rate: <strong>0.00%</strong></li>
+                        <li>False Negative Rate: <strong>0.00%</strong></li>
+                    </ul>
+                </div>
+                
+                <h3>Training Configuration</h3>
+                <ul>
+                    <li>Training Episodes: 20</li>
+                    <li>Initial Reward: 1,085 → Final Reward: 5,000 (360.83% improvement)</li>
+                    <li>Initial Loss: 8.62 → Final Loss: 1.86 (78.46% reduction)</li>
+                    <li>Datasets: 15,000 total samples (5,000 each from UNSW-NB15, CICIDS2017, CERT)</li>
+                    <li>Training Records: 6,000 unified features after preprocessing</li>
+                </ul>
+                
+                <h3>Comparison to Baseline Static Zero Trust</h3>
+                <ul>
+                    <li>Policy Misconfigurations: <strong>↓32%</strong> (85 → 58)</li>
+                    <li>Unauthorized Access Attempts: <strong>↓37%</strong> (240 → 150)</li>
+                    <li>Incident Response Time: <strong>↓40%</strong> (10.2 min → 6.1 min)</li>
+                    <li>False Positive Rate: <strong>↓41%</strong> (6.5% → 3.8%)</li>
+                </ul>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">TensorFlow</span>
+                    <span class="tech-badge">Keras</span>
+                    <span class="tech-badge">Deep Q-Learning</span>
+                    <span class="tech-badge">Reinforcement Learning</span>
+                    <span class="tech-badge">Zero Trust Architecture</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NumPy</span>
+                </div>
+                
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>✅ Successfully trained Deep Q-Learning agent with perfect convergence</li>
+                    <li>✅ Achieved 100% accuracy on test set with zero false positives/negatives</li>
+                    <li>✅ Demonstrated 32-41% improvements over static baseline policies</li>
+                    <li>✅ Integrated three major cybersecurity datasets into unified feature space</li>
+                    <li>✅ Created scalable, real-time policy optimization engine</li>
+                    <li>✅ Reduced incident response time by 40% through automated decision-making</li>
+                </ul>
+                
+                <h3>Real-World Applications</h3>
+                <ul>
+                    <li>Automated security policy enforcement in enterprise networks</li>
+                    <li>Dynamic access control for IT/OT/ICS environments</li>
+                    <li>Intelligent threat response with minimal false positives</li>
+                    <li>Continuous learning from network behavior patterns</li>
+                    <li>Integration with existing SIEM and security infrastructure</li>
+                </ul>
+                
+                <a href="https://github.com/HemangiAhir/ZTPO_Project" target="_blank" class="github-link-modal">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    function showAdditionalExperience() {
-        const additionalExperience = document.getElementById('additional-experience');
-        const continueButton = document.querySelector('.continue-button');
+    <!-- Modal 2: Healthcare IT/OT/ICS Security -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+            <div class="modal-header">
+                <span class="tag">Enterprise Implementation</span>
+                <h2>Securing a Global IT/OT/ICS Environment at Healthcare Company</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Challenge</h3>
+                <p>A global healthcare organization needed to secure their converged IT/OT/ICS infrastructure across multiple facilities while maintaining compliance with HIPAA and ensuring zero disruption to critical medical systems.</p>
+                
+                <h3>Network Architecture - Production Environment</h3>
+                
+                <!-- Slider for Network Asset Diagrams -->
+                <div class="slider-container">
+                    <div class="slider-slide active-slide text-slide">
+                        <h4>Network Asset Topology Overview</h4>
+                        <p>The following network asset diagrams illustrate the fundamental topology connecting OT access switches to the primary router infrastructure, as well as the integration of Claroty, our SaaS-based security solution, with the server environment. These visualizations were specifically designed to provide the healthcare organization with a clear, comprehensive view of their network architecture, enabling more efficient asset management and security oversight across their operational technology landscape.</p>
+                    </div>
+                    
+                    <div class="slider-slide">
+                        <img src="NetworkAssetDiagram.jpg" alt="Network Asset Diagram" class="slider-image">
+                        <p class="slider-caption">Network Asset Diagram - OT Infrastructure Topology</p>
+                    </div>
+                    
+                    <div class="slider-slide">
+                        <img src="ClarotyConnectionDiagram.jpg" alt="Claroty Connection Diagram" class="slider-image">
+                        <p class="slider-caption">Claroty SaaS Integration Architecture</p>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="previousSlide('slider1')" id="slider1-prev">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <span class="slider-indicator">
+                            <span id="slider1-current">1</span> / <span id="slider1-total">3</span>
+                        </span>
+                        <button class="slider-btn" onclick="nextSlide('slider1')" id="slider1-next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
 
-        if (additionalExperience.style.display === 'none') {
-            additionalExperience.style.display = 'block';
-            continueButton.style.display = 'none';
+                <h3>Network Architecture - Sandbox Environment</h3>
+                
+                <!-- Slider for Sandbox Architecture -->
+                <div class="slider-container">
+                    <div class="slider-slide active-slide text-slide">
+                        <h4>Sandbox Testing Environment Architecture</h4>
+                        <p>The sandbox environment architecture is presented through three complementary views. The first diagram provides a high-level Purdue Model perspective, establishing the conceptual security zones and hierarchical structure. This is followed by the physical layout topology, which details the actual hardware connections and network infrastructure deployment. Finally, the micro-segmentation diagram demonstrates the granular communication flow controls and VLAN isolation strategies implemented to ensure secure, controlled interactions between different network segments within the test environment.</p>
+                    </div>
+                    
+                    <div class="slider-slide">
+                        <img src="Sandboxhighlevelarchitecture.jpg" alt="Sandbox High Level Architecture" class="slider-image">
+                        <p class="slider-caption">High-Level Purdue Model Architecture</p>
+                    </div>
+                    
+                    <div class="slider-slide">
+                        <img src="physicallayout.jpg" alt="Physical Layout" class="slider-image">
+                        <p class="slider-caption">Physical Network Layout and Connectivity</p>
+                    </div>
+                    
+                    <div class="slider-slide">
+                        <img src="VLANinfo.jpg" alt="VLAN Information" class="slider-image">
+                        <p class="slider-caption">Micro-segmentation and VLAN Communication Flow</p>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="previousSlide('slider2')" id="slider2-prev">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <span class="slider-indicator">
+                            <span id="slider2-current">1</span> / <span id="slider2-total">4</span>
+                        </span>
+                        <button class="slider-btn" onclick="nextSlide('slider2')" id="slider2-next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <h3>Solution Implemented</h3>
+                <ul>
+                    <li>Deployed dynamic edge segmentation using Elisity</li>
+                    <li>Implemented Claroty XDome for OT asset visibility</li>
+                    <li>Created comprehensive network diagrams and asset inventories</li>
+                    <li>Established micro-segmentation policies for critical medical devices</li>
+                    <li>Integrated threat detection with incident response workflows</li>
+                </ul>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Claroty XDome</span>
+                    <span class="tech-badge">Elisity</span>
+                    <span class="tech-badge">NIST Framework</span>
+                    <span class="tech-badge">ISA/IEC 62443</span>
+                    <span class="tech-badge">Zero Trust</span>
+                    <span class="tech-badge">Purdue Model</span>
+                </div>
+                
+                <h3>Outcomes</h3>
+                <ul>
+                    <li>Enhanced visibility across 5,000+ OT assets</li>
+                    <li>Reduced attack surface by 70%</li>
+                    <li>Achieved compliance with healthcare security standards</li>
+                    <li>Zero operational disruption during implementation</li>
+                    <li>Successfully deployed and validated sandbox environment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Flipper Zero Hardware Detection -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+            <div class="modal-header">
+                <span class="tag">Hardware Security Lab</span>
+                <h2>Detecting Rogue Hardware in &lt;30 Seconds with Flipper Zero</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Objective</h3>
+                <p>Developed a rapid hardware threat detection system capable of identifying rogue devices and unauthorized hardware implants within 30 seconds using offensive security techniques.</p>
+                
+                <h3>Lab Setup</h3>
+                <img src="architecture3.jpg" alt="Hardware Security Lab" class="architecture-image">
+                <p><em>Hardware security testing environment and detection workflow</em></p>
+                
+                <h3>Methodology</h3>
+                <ul>
+                    <li>Used Flipper Zero for RF signal analysis and device fingerprinting</li>
+                    <li>Implemented automated USB device enumeration</li>
+                    <li>Created baseline profiles for authorized hardware</li>
+                    <li>Developed anomaly detection algorithms for rogue devices</li>
+                    <li>Integrated with SIEM for real-time alerting</li>
+                </ul>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Flipper Zero</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">RF Analysis</span>
+                    <span class="tech-badge">USB Protocol</span>
+                    <span class="tech-badge">Offensive Security</span>
+                </div>
+                
+                <h3>Key Findings</h3>
+                <ul>
+                    <li>Successfully detected BadUSB attacks in &lt;10 seconds</li>
+                    <li>Identified unauthorized WiFi pineapples</li>
+                    <li>Discovered covert RF transmitters</li>
+                    <li>100% detection rate for known hardware implants</li>
+                </ul>
+                
+                <a href="https://github.com/HemangiAhir" target="_blank" class="github-link-modal">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: OT Anomaly Detector -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+            <div class="modal-header">
+                <span class="tag">Research & Development</span>
+                <h2>From PCAP to Policy – Building an Open-Source OT Anomaly Detector</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Project Overview</h3>
+                <p>Developed an open-source machine learning system that analyzes network packet captures (PCAP) to detect anomalous behavior in operational technology networks and automatically generates security policies.</p>
+                
+                <h3>System Architecture</h3>
+                <img src="architecture4.jpg" alt="Anomaly Detection Pipeline" class="architecture-image">
+                <p><em>ML pipeline from packet capture to policy generation</em></p>
+                
+                <h3>Technical Implementation</h3>
+                <ul>
+                    <li>Built custom PCAP parser using Scapy and Wireshark</li>
+                    <li>Extracted OT protocol features (Modbus, DNP3, IEC 104)</li>
+                    <li>Trained supervised ML models for anomaly detection</li>
+                    <li>Implemented automated policy recommendation engine</li>
+                    <li>Created visualization dashboard for security analysts</li>
+                </ul>
+                
+                <h3>Technology Stack</h3>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Wireshark</span>
+                    <span class="tech-badge">Scapy</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">Pandas</span>
+                    <span class="tech-badge">NetworkX</span>
+                </div>
+                
+                <h3>Results</h3>
+                <ul>
+                    <li>95%+ accuracy in detecting OT protocol anomalies</li>
+                    <li>Reduced manual policy creation time by 80%</li>
+                    <li>Successfully identified zero-day attack patterns</li>
+                    <li>Open-sourced for community contribution</li>
+                </ul>
+                
+                <a href="https://github.com/HemangiAhir/Packet-Sniffer" target="_blank" class="github-link-modal">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <p class="section-subtitle">Let's connect and discuss cybersecurity</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:hemangi2396@gmail.com">hemangi2396@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Location</h4>
+                    <p>Richmond, VA<br>(Willing to relocate)</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/hemangi-ahir/" target="_blank">View Profile</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/HemangiAhir" target="_blank">View Repositories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Slider functionality
+        const sliders = {
+            slider1: { current: 0, total: 3 },
+            slider2: { current: 0, total: 4 }
+        };
+
+        function updateSlider(sliderId) {
+            const modal = document.getElementById('modal2');
+            const containers = modal.querySelectorAll('.slider-container');
+            const containerIndex = sliderId === 'slider1' ? 0 : 1;
+            const slides = containers[containerIndex].querySelectorAll('.slider-slide');
+            const current = sliders[sliderId].current;
+            
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active-slide');
+                if (index === current) {
+                    slide.classList.add('active-slide');
+                }
+            });
+            
+            // Update counter
+            document.getElementById(`${sliderId}-current`).textContent = current + 1;
+            
+            // Update button states
+            const prevBtn = document.getElementById(`${sliderId}-prev`);
+            const nextBtn = document.getElementById(`${sliderId}-next`);
+            
+            prevBtn.disabled = current === 0;
+            nextBtn.disabled = current === sliders[sliderId].total - 1;
         }
-    }
-</script>
 
+        function nextSlide(sliderId) {
+            if (sliders[sliderId].current < sliders[sliderId].total - 1) {
+                sliders[sliderId].current++;
+                updateSlider(sliderId);
+            }
+        }
 
-        <!-- Experience tab content -->
-        <div class="tab-content" id="experience">
-            <h2>Experience</h2>
-            <p>This is the content for the Experience tab.</p>
-        </div>
+        function previousSlide(sliderId) {
+            if (sliders[sliderId].current > 0) {
+                sliders[sliderId].current--;
+                updateSlider(sliderId);
+            }
+        }
 
-        <!-- Projects tab content -->
-        <!-- Projects tab content -->
-<div class="tab-content" id="projects">
-    <h2>Projects</h2>
+        // Reset sliders when modal opens
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Reset sliders if opening modal2
+            if (modalId === 'modal2') {
+                sliders.slider1.current = 0;
+                sliders.slider2.current = 0;
+                updateSlider('slider1');
+                updateSlider('slider2');
+            }
+        }
 
-    <!-- Project descriptions -->
-    <div class="project-description">
-        <p><strong>SecurePortfolio | January 2024</strong></p>
-        <p>Enhanced "www.hemangiahir.com" through HTML coding and implemented TLS security. Established secure communication using PKI principles and Nginx on AWS EC2. Demonstrates proficiency in web development, security, and server configuration.</p>
-    	<a href="https://github.com/HemangiAhir/HemangiAhir.github.io" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; text-decoration: none; border-radius: 5px; class="github-button">Github-SecurePortfolio</a>
-    </div>
-    <div class="project-description">
-        <p><strong>Wireshark Packet Sniffer</strong></p>
-        <p>Developed a packet sniffer that reads Wireshark PCAP files to distinguish between malicious and benign network traffic per frame.</p>
-   	<a href="https://github.com/HemangiAhir/Packet-Sniffer" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; text-decoration: none; border-radius: 5px;" class="github-button">Github-PacketSniffer</a>
-    </div>
-       <div class="project-description">
-        <p><strong>Log Analysis Tool</strong></p>
-        <p>Designed and implemented a Python-based Log Analysis Tool for a Security Operations Center (SOC). This tool parses log files, extracts key information, and categorizes data based on log levels. It enhances security monitoring, facilitates incident response, and contributes to efficient threat detection within the SOC architecture.</p>
-   	<a href="https://github.com/HemangiAhir/Log-Analysis-Tool-" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: black; color: white; text-decoration: none; border-radius: 5px;" class="github-button">Github-Log Analysis Tool</a>
-       </div>
-	</div>
+        // Modal functions
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
 
-<!-- Skills tab content -->
-<div class="tab-content" id="skills">
-    <h2>Skills</h2>
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
 
-    <!-- Skills descriptions from resume -->
-    <div class="skills-description">
-        <p><strong>Languages:</strong></p>
-        <p>Python, Java, HTML, SQL</p>
-    </div>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navLinks');
 
-    <div class="skills-description">
-        <p><strong>Platforms:</strong></p>
-        <p>Windows, Linux, Azure, Redhat, Metasploit</p>
-    </div>
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
 
-    <div class="skills-description">
-        <p><strong>Tools:</strong></p>
-        <p>Cisco Packet Tracer, Wireshark, Hashcat, John the Ripper, AWS Key Management Service(KMS) for cryptographic key management, AWS VPC configuration tools</p>
-    </div>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.section');
 
-    <div class="skills-description">
-        <p><strong>Frameworks:</strong></p>
-        <p>MITRE ATT&CK, NIST security controls, ISO 27001, ISO 31000, AWS Well-Architected Framework (for securing workloads on AWS)</p>
-    </div>
-
-    <div class="skills-description">
-        <p><strong>Soft Skills:</strong></p>
-        <p>Effective communication, problem-solving, adaptability, team collaboration, attention to detail, time management, leadership</p>
-    </div>
-</div>
-		    
-<!-- Certifications tab content -->
-<div class="tab-content" id="certifications">
-    <h2>Certifications</h2>
-
-    <!-- Certification descriptions -->
-    <div class="certifications-description">
-        <p><strong>Certified in Cybersecurity (ISC)2</strong></p>
-    </div>
-
-    <div class="certifications-description">
-        <p><strong>CompTIA Security+</strong></p>
-    </div>
-</div>
-<!-- Contact tab content -->
-<div class="tab-content" id="contact">
-    <h2>Contact</h2>
-
-    <!-- Contact information with Font Awesome icons -->
-    <div class="contact-information">
-        <p>
-            <strong>Phone:</strong>
-            <span>
-                <i class="fas fa-phone-alt"></i> +1 (726) 209-1852
-            </span>
-        </p>
-
-        <p>
-            <strong>Email:</strong>
-            <span>
-                <i class="fas fa-envelope"></i> hemangi2396@gmail.com
-            </span>
-        </p>
-
-        <p>
-            <strong>Location:</strong>
-            <span>
-                <i class="fas fa-map-marker-alt"></i> San Antonio, TX (Willing to relocate)
-            </span>
-        </p>
-
-        <p>
-            <strong>LinkedIn:</strong>
-            <span>
-                <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hemangi-ahir-16743a154/" target="_blank"> www.linkedin.com/in/hemangi-ahir-16743a154</a>
-            </span>
-        </p>
-
-        <p>
-            <strong>GitHub:</strong>
-            <span>
-                 <i class="fab fa-github"></i> <a href="https://github.com/HemangiAhir" target="_blank"> https://github.com/HemangiAhir </a>
-            </span>
-        </p>
-    </div>
-</div>
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('data-section');
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Hide all sections
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                // Show selected section
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    navMenu.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+                
+                // Smooth scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
