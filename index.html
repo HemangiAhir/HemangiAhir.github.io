@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1082,7 +1083,6 @@
                 <li><a href="#home" class="nav-link home-link active" data-section="home">Home</a></li>
                 <li><a href="#about" class="nav-link" data-section="about">About</a></li>
                 <li><a href="#case-studies" class="nav-link" data-section="case-studies">Case Studies</a></li>
-                <li><a href="#ot-lab" class="nav-link" data-section="ot-lab">Interactive OT Lab</a></li>
                 <li><a href="#offensive-labs" class="nav-link" data-section="offensive-labs">Offensive Security Labs</a></li>
                 <li><a href="#tools" class="nav-link" data-section="tools">Tools & Frameworks</a></li>
                 <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
@@ -1241,8 +1241,16 @@
                 <h2>Resume</h2>
             </div>
             <div class="modal-body">
-                <div style="width: 100%; height: 80vh; overflow: auto;">
+                <div style="width: 100%; height: 80vh; overflow: auto; background: white; border-radius: 10px;">
                     <embed src="resume.pdf" type="application/pdf" width="100%" height="100%" style="border-radius: 10px;">
+                    <!-- Fallback for mobile -->
+                    <div class="mobile-resume-fallback" style="display: none; padding: 2rem; text-align: center;">
+                        <i class="fas fa-file-pdf" style="font-size: 4rem; color: #da70d6; margin-bottom: 1rem;"></i>
+                        <p style="color: #ffffff; margin-bottom: 2rem;">PDF preview is not available on mobile devices.</p>
+                        <a href="resume.pdf" download class="github-link-modal" style="display: inline-flex;">
+                            <i class="fas fa-download"></i> Download Resume (PDF)
+                        </a>
+                    </div>
                 </div>
                 <div style="text-align: center; margin-top: 1.5rem;">
                     <a href="resume.pdf" download class="github-link-modal">
@@ -1312,72 +1320,118 @@
         </div>
     </section>
 
-    <!-- Interactive OT Lab Section -->
-    <section class="section" id="ot-lab">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Interactive <span class="highlight">OT Lab</span></h2>
-                <p class="section-subtitle">Hands-on operational technology security demonstrations</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Live OT Security Demonstrations</h3>
-                    <p>Explore interactive demonstrations showcasing OT/ICS security concepts, including network segmentation, asset discovery, and threat detection in industrial control systems. This lab environment simulates real-world operational technology scenarios for educational and testing purposes.</p>
-                    <ul>
-                        <li>Virtual ICS/SCADA environment setup</li>
-                        <li>Claroty XDome integration demos</li>
-                        <li>Network segmentation strategies</li>
-                        <li>Asset inventory and vulnerability assessment</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <div class="card-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Sandbox Testing Environment</h3>
-                    <p>Access to sandbox environments built for testing security controls, validating configurations, and evaluating new security technologies before production deployment. Includes high-level Purdue Model architecture and micro-segmentation implementations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Offensive Security Labs Section -->
     <section class="section" id="offensive-labs">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Offensive <span class="highlight">Security Labs</span></h2>
-                <p class="section-subtitle">Red team operations and penetration testing research</p>
+                <h2 class="section-title">Offensive Security <span class="highlight">Labs</span></h2>
+                <p class="section-subtitle">🚧 Ongoing Research & Learning - Live Lab Environment</p>
             </div>
+            
+            <div style="background: rgba(138, 43, 226, 0.1); border: 2px solid rgba(138, 43, 226, 0.3); border-radius: 15px; padding: 2rem; margin-bottom: 3rem; text-align: center;">
+                <i class="fas fa-flask" style="font-size: 3rem; color: #da70d6; margin-bottom: 1rem;"></i>
+                <h3 style="color: #da70d6; margin-bottom: 1rem;">Active Learning Laboratory</h3>
+                <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; line-height: 1.7;">
+                    This section documents my ongoing journey in offensive security. These are not completed projects, but rather active learning areas where I'm continuously building skills, experimenting with techniques, and expanding my security testing capabilities. Updated regularly as I progress through courses and hands-on labs.
+                </p>
+            </div>
+
             <div class="cards-grid">
                 <div class="card">
                     <div class="card-icon">
-                        <i class="fas fa-user-ninja"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Hardware Hacking & RF Analysis</h3>
-                    <p>Offensive security research focused on hardware vulnerabilities, rogue device detection, and RF signal analysis. Includes work with Flipper Zero for security assessments and BadUSB attack demonstrations.</p>
-                    <ul>
-                        <li>Flipper Zero security research</li>
-                        <li>Rogue hardware detection techniques</li>
-                        <li>RF signal interception and analysis</li>
-                        <li>USB protocol exploitation</li>
+                    <h3>Learn Ethical Hacking From Scratch</h3>
+                    <span class="date">Udemy Course - In Progress</span>
+                    <p style="margin-bottom: 1.5rem;">Comprehensive ethical hacking course covering the complete penetration testing methodology from reconnaissance to post-exploitation. Building practical skills with 30+ security tools in a controlled lab environment.</p>
+                    
+                    <h4 style="color: #da70d6; margin-top: 1.5rem; margin-bottom: 1rem;">Current Lab Focus Areas:</h4>
+                    <ul style="columns: 2; column-gap: 2rem;">
+                        <li>Kali Linux mastery & terminal commands</li>
+                        <li>Network fundamentals & packet analysis</li>
+                        <li>Information gathering & reconnaissance</li>
+                        <li>Network scanning with Nmap</li>
+                        <li>WiFi security & WEP/WPA/WPA2 cracking</li>
+                        <li>Aircrack-ng wireless attacks</li>
+                        <li>Man-in-the-Middle (MITM) attacks</li>
+                        <li>ARP spoofing & DNS hijacking</li>
+                        <li>Network traffic interception</li>
+                        <li>Metasploit framework exploitation</li>
+                        <li>Client-side attacks & social engineering</li>
+                        <li>Backdoor creation & persistence</li>
+                        <li>Web application vulnerabilities</li>
+                        <li>SQL injection techniques</li>
+                        <li>XSS (Cross-Site Scripting) attacks</li>
+                        <li>File upload vulnerabilities</li>
+                        <li>Post-exploitation techniques</li>
+                        <li>Privilege escalation methods</li>
+                        <li>Password cracking with Hashcat</li>
+                        <li>Linux & Windows system hacking</li>
+                        <li>Android device penetration testing</li>
+                        <li>Cloud server security assessment</li>
                     </ul>
+                    
+                    <h4 style="color: #da70d6; margin-top: 1.5rem; margin-bottom: 1rem;">Tools Being Mastered:</h4>
+                    <div class="tech-stack" style="margin-top: 1rem;">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">Aircrack-ng</span>
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">SQLmap</span>
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">John the Ripper</span>
+                        <span class="skill-tag">Hashcat</span>
+                        <span class="skill-tag">Ettercap</span>
+                        <span class="skill-tag">BeEF</span>
+                        <span class="skill-tag">Veil Framework</span>
+                    </div>
                 </div>
+
                 <div class="card">
                     <div class="card-icon">
-                        <i class="fas fa-bug"></i>
+                        <i class="fas fa-user-shield"></i>
                     </div>
-                    <h3>Network Penetration Testing</h3>
-                    <p>Vulnerability assessment and penetration testing methodologies applied to enterprise networks, focusing on identifying misconfigurations, weak authentication, and network segmentation gaps.</p>
+                    <h3>CEH Preparation Lab Environment</h3>
+                    <span class="date">Certified Ethical Hacker - Training</span>
+                    <p style="margin-bottom: 1.5rem;">Dedicated lab environment for CEH (Certified Ethical Hacker) certification preparation, following EC-Council's curriculum and practicing the five phases of ethical hacking in realistic scenarios.</p>
+                    
+                    <h4 style="color: #da70d6; margin-top: 1.5rem; margin-bottom: 1rem;">CEH Domains Under Study:</h4>
                     <ul>
-                        <li>Network reconnaissance techniques</li>
-                        <li>Exploit development and testing</li>
-                        <li>Post-exploitation strategies</li>
-                        <li>Security control bypass methods</li>
+                        <li><strong>Reconnaissance:</strong> Passive and active information gathering, footprinting techniques, OSINT tools</li>
+                        <li><strong>Scanning & Enumeration:</strong> Port scanning, service detection, vulnerability identification, banner grabbing</li>
+                        <li><strong>System Hacking:</strong> Password attacks, privilege escalation, maintaining access, covering tracks</li>
+                        <li><strong>Network Attacks:</strong> Sniffing, session hijacking, DoS/DDoS attacks, firewall/IDS evasion</li>
+                        <li><strong>Web Application Security:</strong> OWASP Top 10, SQL injection, XSS, CSRF, authentication bypass</li>
+                        <li><strong>Wireless Network Security:</strong> WEP/WPA/WPA2 attacks, rogue AP detection, Bluetooth vulnerabilities</li>
+                        <li><strong>Mobile & IoT Security:</strong> Android/iOS exploitation, IoT device hacking, mobile malware analysis</li>
+                        <li><strong>Social Engineering:</strong> Phishing campaigns, pretexting, baiting, physical security testing</li>
+                        <li><strong>Malware Analysis:</strong> Trojan types, virus analysis, rootkit detection, ransomware behavior</li>
+                        <li><strong>Cloud Security:</strong> AWS/Azure security testing, container vulnerabilities, serverless exploitation</li>
+                        <li><strong>Cryptography:</strong> Encryption algorithms, PKI, hash functions, cryptanalysis techniques</li>
+                    </ul>
+                    
+                    <h4 style="color: #da70d6; margin-top: 1.5rem; margin-bottom: 1rem;">Lab Infrastructure:</h4>
+                    <ul>
+                        <li>Virtualized testing environment (VMware/VirtualBox)</li>
+                        <li>Kali Linux attack machine</li>
+                        <li>Metasploitable2 & Metasploitable3 targets</li>
+                        <li>DVWA (Damn Vulnerable Web Application)</li>
+                        <li>Windows Server vulnerable configurations</li>
+                        <li>Network segmentation with virtual switches</li>
+                        <li>Isolated penetration testing sandbox</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div style="margin-top: 3rem; padding: 2rem; background: rgba(26, 11, 46, 0.5); border-radius: 15px; border-left: 4px solid #da70d6;">
+                <h3 style="color: #da70d6; margin-bottom: 1rem;"><i class="fas fa-exclamation-triangle"></i> Lab Environment Ethics Statement</h3>
+                <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin-bottom: 1rem;">
+                    All offensive security activities documented here are conducted exclusively in isolated, controlled lab environments or against systems I own and have explicit permission to test. These labs exist solely for educational purposes, skill development, and security research.
+                </p>
+                <p style="color: rgba(255, 255, 255, 0.85); line-height: 1.7;">
+                    I adhere to responsible disclosure practices, ethical hacking principles, and legal guidelines in all security research endeavors. The techniques learned are used to better understand attacker methodologies so I can more effectively defend critical infrastructure and help organizations improve their security posture.
+                </p>
             </div>
         </div>
     </section>
@@ -1874,6 +1928,16 @@
         function openResumeModal() {
             document.getElementById('resumeModal').classList.add('active');
             document.body.style.overflow = 'hidden';
+            
+            // Check if mobile and show fallback
+            if (window.innerWidth <= 768) {
+                const embed = document.querySelector('#resumeModal embed');
+                const fallback = document.querySelector('.mobile-resume-fallback');
+                if (embed && fallback) {
+                    embed.style.display = 'none';
+                    fallback.style.display = 'block';
+                }
+            }
         }
 
         function closeResumeModal() {
