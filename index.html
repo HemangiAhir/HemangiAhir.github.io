@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1174,7 +1173,42 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About <span class="highlight">Me</span></h2>
-                <p class="section-subtitle">Academic foundation in cybersecurity and engineering</p>
+                <p class="section-subtitle">Cybersecurity specialist, creative thinker, lifelong learner</p>
+            </div>
+            
+            <div class="card" style="max-width: 900px; margin: 0 auto 3rem;">
+                <div class="card-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3 style="color: #da70d6; margin-bottom: 1.5rem;">Who I Am</h3>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.2rem;">
+                    I'm a Cybersecurity Specialist with a somewhat unusual profile: by day I protect both IT and OT environments in critical infrastructure, and by night I sketch and design clothes (yes, I'm currently sewing a small streetwear-inspired collection just for fun). One foot in high-stakes security, the other in creative expression—that mix of precision and imagination is what defines me.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.2rem;">
+                    What truly drives me is the belief that <strong style="color: #da70d6;">security is part art, part science</strong>. I'm the kind of person who will stay until midnight tracing a rogue packet through an OT network, updating network diagrams pixel by pixel, or rewriting firewall policies line by line, because details matter when lives and critical systems are on the line. At my current role I've helped secure operational technology assets, performed risk assessments, troubleshot complex networking issues, and turned outdated documentation into living, accurate blueprints everyone can trust.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.2rem;">
+                    I'm hardworking, endlessly curious, and honestly still a student at heart. Every problem is a puzzle I want to solve, and I'm never afraid to admit "I don't know… yet." That openness is what pushes me forward; right now I'm teaching myself offensive security in my spare time because I dream of one day adding penetration testing to the value I bring to teams.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.2rem;">
+                    What pulled me into this field in the first place? The paradox of our time: emerging technologies are incredible and full of promise, yet people hesitate to embrace them because they're not sure who to trust with their data or their safety. I want to be part of the answer—someone who helps build systems that are not only powerful, but genuinely trustworthy.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 1.2rem;">
+                    When I'm not hunting misconfigurations or reading RFCs, I'm actually writing a book (on a completely unrelated topic!) that I plan to self-publish soon—another reminder that creativity and discipline can live in the same person.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.9; color: rgba(255, 255, 255, 0.85); margin-bottom: 2rem;">
+                    Take a look around my portfolio to see some of the projects I'm proud of, from OT segmentation designs to homemade labs. If anything resonates, I'd love to hear from you. Always happy to connect, collaborate, or simply geek out about security (or fashion).
+                </p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button onclick="openResumeModal()" class="github-link-modal" style="cursor: pointer; border: none;">
+                        <i class="fas fa-file-pdf"></i> View My Resume
+                    </button>
+                </div>
+            </div>
+            
+            <div class="section-header" style="margin-top: 4rem;">
+                <h3 style="font-size: 2rem; color: #ffffff; margin-bottom: 1rem;">Educational Background</h3>
             </div>
             <div class="cards-grid">
                 <div class="card">
@@ -1198,6 +1232,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content" style="max-width: 1000px;">
+            <span class="modal-close" onclick="closeResumeModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Resume</h2>
+            </div>
+            <div class="modal-body">
+                <div style="width: 100%; height: 80vh; overflow: auto;">
+                    <embed src="resume.pdf" type="application/pdf" width="100%" height="100%" style="border-radius: 10px;">
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="resume.pdf" download class="github-link-modal">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Case Studies Section -->
     <section class="section" id="case-studies">
@@ -1441,7 +1495,7 @@
                 </ul>
                 
                 <h3>Training Results</h3>
-                <img src="training_results.png" alt="Training Performance Graphs" class="architecture-image">
+                <img src="training_results.jpg" alt="Training Performance Graphs" class="architecture-image">
                 <p><em>Model convergence showing reward improvement and loss reduction over 20 episodes</em></p>
                 
                 <h3>Performance Metrics</h3>
@@ -1814,6 +1868,17 @@
                 updateSlider('slider1');
                 updateSlider('slider2');
             }
+        }
+
+        // Resume modal functions
+        function openResumeModal() {
+            document.getElementById('resumeModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resumeModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
 
         // Modal functions
